@@ -1,4 +1,6 @@
-package ru.mirea.pkmn;
+package ru.mirea.pkmn.arhipovaas;
+
+import ru.mirea.pkmn.Card;
 
 public class PkmnApplication {
     public static void main(String[] args) {
