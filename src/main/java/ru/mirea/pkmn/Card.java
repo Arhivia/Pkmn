@@ -134,19 +134,19 @@ public class Card implements Serializable {
 
     @Override
     public String toString() {
-        return "Card{" +
-                "pokemonStage=" + pokemonStage +
-                ", name='" + name + '\'' +
-                ", hp=" + hp +
-                ", pokemonType=" + pokemonType +
-                ", evolvesFrom=" + evolvesFrom +
-                ", skills=" + skills +
-                ", weaknessType=" + weaknessType +
-                ", resistanceType=" + resistanceType +
-                ", retreatCost='" + retreatCost + '\'' +
-                ", gameSet='" + gameSet + '\'' +
-                ", regulationMark=" + regulationMark +
-                ", pokemonOwner=" + pokemonOwner +
+        return "Card{" + "\n" +
+                "\t" + "pokemonStage=" + pokemonStage + ",\n" +
+                "\t" + "name='" + name + '\'' + ",\n" +
+                "\t" + "hp=" + hp + "\n" +
+                "\t" + "pokemonType=" + pokemonType + ",\n" +
+                "\t" + "evolvesFrom=" + evolvesFrom + ",\n" +
+                "\t" + "skills=" + skills + ",\n" +
+                "\t" + "weaknessType=" + weaknessType + ",\n" +
+                "\t" + "resistanceType=" + resistanceType + ",\n" +
+                "\t" + "retreatCost='" + retreatCost + '\'' + ",\n" +
+                "\t" + "gameSet='" + gameSet + '\'' + ",\n" +
+                "\t" + "regulationMark=" + regulationMark + ",\n" +
+                "\t" + "pokemonOwner=" + pokemonOwner + ",\n" +
                 '}';
     }
 }
