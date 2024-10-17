@@ -1,6 +1,9 @@
-package ru.mirea.arhipovaas.pkmn;
+package ru.mirea.pkmn;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
+    public static final long serialVersionUID = 1L;
     private String firstName;
     private String surName;
     private String familyName;

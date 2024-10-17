@@ -1,6 +1,9 @@
-package ru.mirea.arhipovaas.pkmn;
+package ru.mirea.pkmn;
 
-public class AttackSkill {
+import java.io.Serializable;
+
+public class AttackSkill implements Serializable {
+    public static final long serialVersionUID = 1L;
     private String name;
     private String description;
     private String cost;

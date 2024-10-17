@@ -1,4 +1,4 @@
-package ru.mirea.arhipovaas.pkmn;
+package ru.mirea.pkmn;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class CardImport {
         this.filePath = filePath;
     }
 
-    public Card imprt() {
+    public Card importFromTxt() {
         Card card = new Card();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -39,7 +39,7 @@ public class CardImport {
             line = br.readLine();
             if (!line.equals("-") && !line.isEmpty()) {
                 CardImport c = new CardImport(line);
-                Card cd = c.imprt();
+                Card cd = c.importFromTxt();
                 card.setEvolvesFrom(cd);
             }
 
@@ -87,6 +87,17 @@ public class CardImport {
 
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
+        }
+        return card;
+    }
+
+    public Card importFromCrd(String filename) {
+        Card card = null;
+        try (FileInputStream fileInputStream = new FileInputStream(filename);
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            card = (Card) objectInputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println(e.getMessage());
         }
         return card;
     }

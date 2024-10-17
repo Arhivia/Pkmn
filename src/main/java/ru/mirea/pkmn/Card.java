@@ -1,7 +1,10 @@
-package ru.mirea.arhipovaas.pkmn;
-import java.util.*;
+package ru.mirea.pkmn;
 
-public class Card {
+import java.util.*;
+import java.io.Serializable;
+
+public class Card implements Serializable {
+    public static final long serialVersionUID = 1L;
     private PokemonStage pokemonStage;
     private String name;
     private int hp;
